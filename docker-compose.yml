@@ -10,5 +10,7 @@ services:
       - "3000:3000"
     restart: always
     environment: 
-      - DIFY_API_URL=https://api.dify.ai/v1
-      - BOT_TYPE=Chat
+      - DIFY_API_URL=http://host.docker.internal:8080/v1
+      - BOT_TYPE=Workflow
+      - INPUT_VARIABLE=userInput
+      - OUTPUT_VARIABLE=text
