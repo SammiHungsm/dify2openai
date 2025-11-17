@@ -3,8 +3,8 @@ services:
   dify2openai:
     container_name: dify2openai
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..             # <-- Look up one directory (to the project root)
+      dockerfile: config/Dockerfile # <-- Tell it where the Dockerfile is (relative to the new context)
     network_mode: bridge
     ports:
       - "3000:3000"
